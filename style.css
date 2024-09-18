@@ -341,8 +341,8 @@ li {
 
 /* login/register buttons ----------------------------------------------------------*/
 
-.register .h1{
-    font-size: 14px; 
+.register .h1 {
+    font-size: 14px;
 }
 
 .wrapper .btn {
@@ -465,7 +465,7 @@ li {
 .events img:hover {
     max-width: 65%;
     border: none;
-    box-shadow: 10px 10px 10px var(--black);
+    box-shadow: 10px 10px 10px black;
     transition: 0.2s;
 }
 
