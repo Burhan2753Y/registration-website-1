@@ -1,0 +1,83 @@
+const hamburger = document.querySelector('.hamburger')
+const navMenu = document.querySelector('.nav-menu')
+
+const dropdowns = document.querySelectorAll('.dropdown');
+
+hamburger.addEventListener("click", () => {
+    console.log("Hamburger clicked");
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-menu .nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}));
+
+dropdowns.forEach(dropdown => {
+    const select = dropdown.querySelector('.select');
+    const caret = dropdown.querySelector('.caret');
+    const menu = dropdown.querySelector('.menu');
+    const options = dropdown.querySelectorAll('.menu li');
+    const selected = dropdown.querySelector('.selected');
+    const wrapper = document.querySelector('.wrapper');
+
+    select.addEventListener('click', () => {
+        select.classList.toggle('select-clicked');
+        caret.classList.toggle('caret-rotate');
+        menu.classList.toggle('menu-open');
+        wrapper.classList.toggle('wrapper-active');
+    });
+
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            selected.innerText = option.innerText;
+            select.classList.remove('select-clicked');
+            caret.classList.remove('caret-rotate');
+            menu.classList.remove('menu-open');
+            wrapper.classList.remove('wrapper-active');
+
+            options.forEach(o => o.classList.remove('active'));
+            option.classList.add('active');
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuItems = document.querySelectorAll('.menu li');
+    const nextButton = document.getElementById('next');
+    let selectedEvent = '';
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function () {
+            selectedEvent = this.textContent;
+        });
+    });
+
+    nextButton.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        if (selectedEvent.includes('HackVenture')) {
+            window.location.href = 'register-hv.html';
+        } else if (selectedEvent.includes('Quizzie Quest')) {
+            window.location.href = 'register-qq.html';
+        } else if (selectedEvent.includes('BGMI')) {
+            window.location.href = 'register-bgmi.html';
+        } else if (selectedEvent.includes('Code In The Dark')) {
+            window.location.href = 'register-citd.html';
+        } else if (selectedEvent.includes('Quick Think')) {
+            window.location.href = 'register-qt.html';
+        } else {
+            alert('Please select a valid event.');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const previousButton = document.getElementById('previous');
+
+    previousButton.addEventListener('click', function () {
+        window.location.href = 'register.html';
+    });
+});
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Code In The Dark-Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+
+        <a href="home.html" class="logo">technovation.</a>
+
+        <nav class="navigation">
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a class="btnLogin-popup nav-link" href="register.html">Register</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <img src="icons/menu.svg" alt="menu">
+                <img src="icons/close.svg" alt="close" style="display: none;">
+            </div>
+
+        </nav>
+
+    </header>
+
+    <div class="wrapper">
+
+        <div class="register">
+            <form action="#">
+                <h1>Code In The Dark</h1>
+
+                <div class="input-box">
+                    <input type="text" name="Participant" placeholder="1st Participant's Name" required>
+                    <img src="/icons/person.svg" alt="person">
+                </div>
+
+                <div class="input-box">
+                    <input type="text" name="College" placeholder="College Name" required>
+                    <img src="/icons/school.svg" alt="school">
+                </div>
+
+                <div class="input-box">
+                    <input type="text" name="Email" placeholder="Email(Team Leader's)" required>
+                    <img src="/icons/mail.svg" alt="mail">
+                </div>
+
+                <div class="tandc">
+                    <label><input type="checkbox" required>I acknowledge the <a href="rules.html">rules</a> and agree to
+                        cooperate.</label>
+                </div>
+
+                <div class="tandc">
+                    <label><input type="checkbox" required> I agree to the <a href="tandc.html">Terms &
+                            Conditions.</a></label>
+
+                </div>
+
+                <button id="previous" class="btn">Previous</button>
+                <button type="submit" class="btn">Next</button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
