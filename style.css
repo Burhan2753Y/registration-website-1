@@ -12,7 +12,6 @@
     --white: #f4f4f4;
 }
 
-
 body {
     background-image: url("images/background.png");
     background-repeat: repeat;
@@ -31,7 +30,7 @@ body {
     justify-content: space-between;
     padding: 0;
     box-sizing: border-box;
-    min-height: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     padding: 0 24px;
@@ -58,6 +57,13 @@ header .logo {
     text-decoration: none;
     color: var(--white);
     user-select: none;
+
+
+    filter: grayscale(100%);
+}
+
+#imglogo {
+    height: 70px;
 }
 
 .nav-link {
