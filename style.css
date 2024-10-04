@@ -288,13 +288,13 @@ li {
     position: relative;
     width: 100%;
     height: 40px;
-    margin: 25px 0;
+    margin: 40px 0;
 }
 
 .wrapper img {
-    margin-left: 260px;
-    filter: invert();
-    width: 27px;
+    filter: invert(80%);
+    width: 25px;
+    transform: translate(260px, -33px);
 }
 
 .input-box input {
@@ -474,6 +474,7 @@ li {
     box-shadow: 10px 10px 10px black;
     transition: 0.2s;
 }
+
 
 
 /* footer ---------------------------------------------------------- */

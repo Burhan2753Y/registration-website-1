@@ -1,8 +1,9 @@
 const hamburger = document.querySelector('.hamburger')
 const navMenu = document.querySelector('.nav-menu')
-
 const dropdowns = document.querySelectorAll('.dropdown');
 
+
+// hamburger menu
 hamburger.addEventListener("click", () => {
     console.log("Hamburger clicked");
     hamburger.classList.toggle("active");
@@ -14,6 +15,8 @@ document.querySelectorAll(".nav-menu .nav-link").forEach(n => n.addEventListener
     navMenu.classList.remove("active");
 }));
 
+
+// dropdown
 dropdowns.forEach(dropdown => {
     const select = dropdown.querySelector('.select');
     const caret = dropdown.querySelector('.caret');
@@ -43,6 +46,8 @@ dropdowns.forEach(dropdown => {
     });
 });
 
+
+// select option from list
 document.addEventListener('DOMContentLoaded', function () {
     const menuItems = document.querySelectorAll('.menu li');
     const nextButton = document.getElementById('next');
@@ -73,6 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// previous-next button
 document.addEventListener('DOMContentLoaded', function () {
     const previousButton = document.getElementById('previous');
 
@@ -81,3 +88,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// images
+document.getElementById('hvImage').addEventListener('click', function() {
+    location.href = 'register-hv.html';
+});
+document.getElementById('citdImage').addEventListener('click', function() {
+    location.href = 'register-citd.html';
+});
+document.getElementById('bgmiImage').addEventListener('click', function() {
+    location.href = 'register-bgmi.html';
+});
+document.getElementById('qtImage').addEventListener('click', function() {
+    location.href = 'register-qt.html';
+});
+document.getElementById('qqImage').addEventListener('click', function() {
+    location.href = 'register-qq.html';
+});
