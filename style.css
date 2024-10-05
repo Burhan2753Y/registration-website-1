@@ -8,15 +8,17 @@
 }
 
 :root {
-    --black: #15141A;
+    --black: #09041f;
+    --grey: #afafaf;
     --white: #f4f4f4;
+    --transparent: #0000001a;
 }
 
 body {
     background-image: url("images/background.png");
+    background-color: var(--black);
     background-repeat: repeat;
     background-size: 100%;
-    backdrop-filter: blur(90px);
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -57,13 +59,12 @@ header .logo {
     text-decoration: none;
     color: var(--white);
     user-select: none;
-
-
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
 }
 
 #imglogo {
-    height: 70px;
+    padding-top: 10px;
+    width: 50px;
 }
 
 .nav-link {
@@ -94,7 +95,7 @@ li {
 }
 
 .navigation a:hover {
-    color: #afafaf;
+    color: var(--grey);
 }
 
 .navigation a::after {
@@ -246,6 +247,11 @@ li {
         max-width: 90%;
         box-shadow: 4px 4px 4px var(--black);
         transition: 0.2s;
+    }
+
+    .about h1,
+    h2 {
+        font-size: 10px;
     }
 
 }
@@ -457,13 +463,16 @@ li {
 
 /* home blobs ---------------------------------------------------------- */
 
+body .events {
+    width: 90%;
+    margin: auto;
+}
+
 .events img {
     display: flex;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     max-width: 60%;
-    border: 3px solid #0000001a;
+    border: 3px solid  var(--transparent);
     border-radius: 10px;
     transition: 0.2s;
 }
@@ -475,7 +484,75 @@ li {
     transition: 0.2s;
 }
 
+/* about ---------------------------------------------------------- */
 
+.about {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    letter-spacing: 0.08rem;
+    text-align: center;
+}
+
+.about .main {
+    margin: 100px auto;
+}
+
+.about h1,
+h2 {
+    font-size: 2rem;
+    color: var(--grey);
+}
+
+.about h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--grey);
+}
+
+.about h2 {
+    margin-top: 5%;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    color: var(--grey);
+    border-bottom: 2px solid var(--grey);
+    border-radius: 0%;
+}
+
+.about p {
+    margin: 10px 0 40px 0;
+    color: var(--white);
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.photos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photos img{
+    margin: 20px auto;
+    max-width: 45%;
+    border: 2px solid var(--transparent);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.photos img:hover {
+    max-width: 48%;
+    border: none;
+    box-shadow: 5px 5px 5px black;
+    transition: 0.2s;
+}
+
+.arrow {
+    margin: 100px auto;
+}
+.arrow1 {
+    margin: -120px auto 100px auto;
+}
 
 /* footer ---------------------------------------------------------- */
 
