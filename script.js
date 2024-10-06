@@ -1,11 +1,9 @@
-const hamburger = document.querySelector('.hamburger')
-const navMenu = document.querySelector('.nav-menu')
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 const dropdowns = document.querySelectorAll('.dropdown');
-
 
 // hamburger menu
 hamburger.addEventListener("click", () => {
-    console.log("Hamburger clicked");
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
 });
@@ -14,7 +12,6 @@ document.querySelectorAll(".nav-menu .nav-link").forEach(n => n.addEventListener
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }));
-
 
 // dropdown
 dropdowns.forEach(dropdown => {
@@ -33,19 +30,20 @@ dropdowns.forEach(dropdown => {
     });
 
     options.forEach(option => {
-        option.addEventListener('click', () => {
-            selected.innerText = option.innerText;
-            select.classList.remove('select-clicked');
-            caret.classList.remove('caret-rotate');
-            menu.classList.remove('menu-open');
-            wrapper.classList.remove('wrapper-active');
+        if (option.textContent !== "Select an Event") {
+            option.addEventListener('click', () => {
+                selected.innerText = option.innerText;
+                select.classList.remove('select-clicked');
+                caret.classList.remove('caret-rotate');
+                menu.classList.remove('menu-open');
+                wrapper.classList.remove('wrapper-active');
 
-            options.forEach(o => o.classList.remove('active'));
-            option.classList.add('active');
-        });
+                options.forEach(o => o.classList.remove('active'));
+                option.classList.add('active');
+            });
+        }
     });
 });
-
 
 // select option from list
 document.addEventListener('DOMContentLoaded', function () {
@@ -78,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 // previous-next button
 document.addEventListener('DOMContentLoaded', function () {
     const previousButton = document.getElementById('previous');
@@ -88,20 +85,46 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 // images
-document.getElementById('hvImage').addEventListener('click', function() {
+document.getElementById('hvImage').addEventListener('click', function () {
     location.href = 'register-hv.html';
 });
-document.getElementById('citdImage').addEventListener('click', function() {
+document.getElementById('citdImage').addEventListener('click', function () {
     location.href = 'register-citd.html';
 });
-document.getElementById('bgmiImage').addEventListener('click', function() {
+document.getElementById('bgmiImage').addEventListener('click', function () {
     location.href = 'register-bgmi.html';
 });
-document.getElementById('qtImage').addEventListener('click', function() {
+document.getElementById('qtImage').addEventListener('click', function () {
     location.href = 'register-qt.html';
 });
-document.getElementById('qqImage').addEventListener('click', function() {
+document.getElementById('qqImage').addEventListener('click', function () {
     location.href = 'register-qq.html';
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const nextButton = document.getElementById('next');
+    const selectedEvent = document.querySelector('.selected');
+
+    nextButton.addEventListener('click', function (event) {
+        event.preventDefault(); 
+        // Prevent form submission by default
+
+        if (selectedEvent.textContent === 'Select an Event') {
+            alert('Please select an event before proceeding.');
+        } else {
+            if (selectedEvent.textContent.includes('HackVenture')) {
+                window.location.href = 'register-hv.html';
+            } else if (selectedEvent.textContent.includes('Quizzie Quest')) {
+                window.location.href = 'register-qq.html';
+            } else if (selectedEvent.textContent.includes('BGMI')) {
+                window.location.href = 'register-bgmi.html';
+            } else if (selectedEvent.textContent.includes('Code In The Dark')) {
+                window.location.href = 'register-citd.html';
+            } else if (selectedEvent.textContent.includes('Quick Think')) {
+                window.location.href = 'register-qt.html';
+            }
+        }
+    });
 });

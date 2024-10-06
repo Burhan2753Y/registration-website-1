@@ -8,21 +8,32 @@
 }
 
 :root {
-    --black: #09041f;
+    --black: #060216;
     --grey: #afafaf;
     --white: #f4f4f4;
     --transparent: #0000001a;
 }
 
+html,
 body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+body {
+    background-size: cover;
     background-image: url("images/background.png");
     /* background-color: var(--black); */
     background-repeat: repeat;
-    background-size: 100%;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: "League Spartan";
+    font-size: 1rem;
     font-weight: 400;
     font-style: normal;
 }
@@ -248,18 +259,28 @@ li {
         transition: 0.2s;
     }
 
-    .about h1,
-    h2 {
-        font-size: 10px;
+    .footer {
+        text-align: left;
+        padding: 5%;
     }
 
-}
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
 
+    .footer .row a i {
+        margin: 0% 3%;
+
+    }
+}
 
 /* wrapper ----------------------------------------------------------*/
 
 .wrapper {
     margin: auto;
+    margin-bottom: 100%;
     top: 80px;
     position: relative;
     width: 370px;
@@ -269,6 +290,7 @@ li {
     color: var(--black);
     padding: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -471,7 +493,7 @@ body .events {
     display: flex;
     margin: 20px auto;
     max-width: 60%;
-    border: 3px solid  var(--transparent);
+    border: 3px solid var(--transparent);
     border-radius: 10px;
     transition: 0.2s;
 }
@@ -486,9 +508,10 @@ body .events {
 /* about ---------------------------------------------------------- */
 
 .about {
-    width: 90%;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    width: 80%;
     margin: 0 auto;
-    padding: 20px;
     letter-spacing: 0.08rem;
     text-align: center;
 }
@@ -531,7 +554,7 @@ h2 {
     flex-wrap: wrap;
 }
 
-.photos img{
+.photos img {
     margin: 20px auto;
     max-width: 45%;
     border: 2px solid var(--transparent);
@@ -549,50 +572,50 @@ h2 {
 .arrow {
     margin: 100px auto;
 }
+
 .arrow1 {
     margin: -120px auto 100px auto;
 }
 
 /* footer ---------------------------------------------------------- */
 
-footer {
-    padding-top: 70px;
-    padding-bottom: 80px;
-    margin: auto;
-    background-color: var(--black);
+.footer {
+    background: var(--black);
+    text-align: center;
+    padding: 20px 0;
     color: var(--white);
-    display: grid;
-    justify-items: center;
-    grid-template-areas: "question question question question"
-        "foot1 foot2 foot3 foot4"
-        "credit1 credit2 credit3 credit4";
-    font-family: "League Spartan";
-    font-weight: 400;
+    width: 100%;
+    margin-top: auto;
 }
 
-.footer-menu {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.7% 0%;
+    color: var(--grey);
+    font-size: 0.8em;
 }
 
-footer a {
-    color: rgba(255, 255, 255, 0.7);
+.footer .row a {
+    text-decoration: none;
+    color: var(--grey);
+    transition: 0.5s;
 }
 
-footer span {
-    margin: auto;
-    grid-area: question;
-    padding-bottom: 25px;
+.footer .row a:hover {
+    color: var(--white);
 }
 
-footer select {
-    margin-top: 20px;
-    grid-area: lang1;
+.footer .row ul {
+    width: 100%;
 }
 
-footer .credit {
-    margin-top: 40px;
-    margin-left: 150%;
-    grid-area: credit1;
+.footer .row ul li {
+    display: inline-block;
+    margin: 10px 40px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 6%;
 }
