@@ -41,12 +41,10 @@ body {
 .navigation {
     background-color: transparent;
     justify-content: space-between;
-    padding: 0;
     box-sizing: border-box;
     height: 60px;
     display: flex;
     align-items: center;
-    padding: 0 24px;
 }
 
 header {
@@ -275,6 +273,7 @@ li {
         margin: 0% 3%;
 
     }
+
 }
 
 /* wrapper ----------------------------------------------------------*/
@@ -343,7 +342,7 @@ li {
     right: 20px;
     transform: translateY(80%);
     font-size: 16px;
-    filter:invert(30%);
+    filter: invert(30%);
     filter: opacity(80%);
 }
 
@@ -503,6 +502,22 @@ body .events {
 
 /* about ---------------------------------------------------------- */
 
+.hero {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero-text h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
 .about {
     min-height: 100vh;
     padding-bottom: 50px;
@@ -524,11 +539,11 @@ h2 {
 
 .about h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin: 30px;
     color: var(--grey);
 }
 
-.about h2 {
+.about h2, h3 {
     margin-top: 5%;
     margin-bottom: 20px;
     padding-bottom: 15px;
@@ -552,14 +567,14 @@ h2 {
 
 .photos img {
     margin: 20px auto;
-    max-width: 45%;
+    max-width: 100%;
     border: 2px solid var(--transparent);
     border-radius: 10px;
     transition: 0.2s;
 }
 
 .photos img:hover {
-    max-width: 48%;
+    max-width: 95%;
     border: none;
     box-shadow: 5px 5px 5px black;
     transition: 0.2s;
@@ -571,6 +586,51 @@ h2 {
 
 .arrow1 {
     margin: -120px auto 100px auto;
+}
+
+
+/* events ---------------------------------------------------------- */
+
+
+main {
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: var(--white);
+}
+
+main li {
+    padding-top: 6%;
+}
+
+strong {
+    color: var(--white);
+}
+
+/* Section Spacing */
+section {
+    margin-bottom: 10%;
+}
+
+.register .navigation{
+    justify-content: center;
+    padding-bottom: 20%;
+}
+
+.register .navigation .btnLogin-popup {
+    padding: 25px 45px;
+    background: var(--transparent);
+    border: 1px solid var(--grey);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.register .navigation .btnLogin-popup:hover {
+    background: var(--white);
+    border: none;
 }
 
 /* footer ---------------------------------------------------------- */
@@ -615,4 +675,93 @@ h2 {
 .footer .row a i {
     font-size: 2em;
     margin: 0% 6%;
+}
+
+
+
+/* time line-------------------------------------------------------------*/
+
+#timeline-section {
+    padding: 40px 20px;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background-color: var(--grey);
+    transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    margin: 0px 0px 0px 0px;
+    width: 50%;
+}
+
+.timeline-content h2 {
+    font-size: 1.3rem;
+    color: var(--white);
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item.left {
+    left: 0%;
+    text-align: right;
+}
+
+.timeline-item.right .timeline-content {
+    border: 2px solid var(--black);
+    margin-left: 15px;
+}
+
+.timeline-item.left .timeline-content {
+    border: 2px solid var(--black);
+    margin-right: 15px;
+}
+
+/* Timeline Content */
+.timeline-content {
+    background: var(--transparent);
+    padding: 10px;
+    position: relative;
+}
+
+.timeline-time {
+    display: block;
+    margin-top: 10px;
+    color: var(--grey);
+    font-weight: bold;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.timeline-item.right .timeline-content::before {
+    left: -23px;
+}
+
+.timeline-item.left .timeline-content::before {
+    right: -23px;
 }

@@ -87,19 +87,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // images
 document.getElementById('hvImage').addEventListener('click', function () {
-    location.href = 'register-hv.html';
+    location.href = 'hv.html';
 });
 document.getElementById('citdImage').addEventListener('click', function () {
-    location.href = 'register-citd.html';
+    location.href = 'citd.html';
 });
 document.getElementById('bgmiImage').addEventListener('click', function () {
-    location.href = 'register-bgmi.html';
+    location.href = 'bgmi.html';
 });
 document.getElementById('qtImage').addEventListener('click', function () {
-    location.href = 'register-qt.html';
+    location.href = 'qt.html';
 });
 document.getElementById('qqImage').addEventListener('click', function () {
-    location.href = 'register-qq.html';
+    location.href = 'qq.html';
 });
 
 
