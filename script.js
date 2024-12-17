@@ -61,15 +61,15 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         if (selectedEvent.includes('HackVenture')) {
-            window.location.href = 'register-hv.html';
+            window.location.href = 'register-pages/register-hv.html';
         } else if (selectedEvent.includes('Quizzie Quest')) {
-            window.location.href = 'register-qq.html';
+            window.location.href = 'register-pages/register-qq.html';
         } else if (selectedEvent.includes('BGMI')) {
-            window.location.href = 'register-bgmi.html';
+            window.location.href = 'register-pages/register-bgmi.html';
         } else if (selectedEvent.includes('Code In The Dark')) {
-            window.location.href = 'register-citd.html';
+            window.location.href = 'register-pages/register-citd.html';
         } else if (selectedEvent.includes('Quick Think')) {
-            window.location.href = 'register-qt.html';
+            window.location.href = 'register-pages/register-qt.html';
         } else {
             alert('Please select a valid event.');
         }
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const previousButton = document.getElementById('previous');
 
     previousButton.addEventListener('click', function () {
-        window.location.href = 'register.html';
+        window.location.href = '../register.html';
     });
 });
 
@@ -115,15 +115,15 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Please select an event before proceeding.');
         } else {
             if (selectedEvent.textContent.includes('HackVenture')) {
-                window.location.href = 'register-hv.html';
+                window.location.href = 'register-pages/register-hv.html';
             } else if (selectedEvent.textContent.includes('Quizzie Quest')) {
-                window.location.href = 'register-qq.html';
+                window.location.href = 'register-pages/register-qq.html';
             } else if (selectedEvent.textContent.includes('BGMI')) {
-                window.location.href = 'register-bgmi.html';
+                window.location.href = 'register-pages/register-bgmi.html';
             } else if (selectedEvent.textContent.includes('Code In The Dark')) {
-                window.location.href = 'register-citd.html';
+                window.location.href = 'register-pages/register-citd.html';
             } else if (selectedEvent.textContent.includes('Quick Think')) {
-                window.location.href = 'register-qt.html';
+                window.location.href = 'register-pages/register-qt.html';
             }
         }
     });
