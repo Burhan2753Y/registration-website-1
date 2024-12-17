@@ -620,7 +620,7 @@ section {
 }
 
 .register .navigation .btnLogin-popup {
-    padding: 25px 45px;
+    padding: 15px 15px;
     background: var(--transparent);
     border: 1px solid var(--grey);
     font-size: 2rem;
