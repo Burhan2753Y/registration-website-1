@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,8 @@
 
 :root {
     --black: #060216;
+    --grad: linear-gradient(#001f2a, #198097, #001118);
+    --grad-inv: linear-gradient(#198097, #001f2a, #198097);
     --grey: #afafaf;
     --white: #f4f4f4;
     --transparent: #0000001a;
@@ -26,8 +29,12 @@ main {
 
 body {
     background-size: cover;
-    background-image: url("images/background.png");
-    /* background-color: var(--black); */
+
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), /* Dark overlay */
+        url("images/background.png");
+
+    /* background-image: url("images/background.png"); */
     background-repeat: repeat;
     justify-content: center;
     align-items: center;
@@ -53,12 +60,17 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 1px;
-    background: var(--black);
+    /* background: var(--black); */
+
+    background: var(--grad);
+
     border-radius: 0px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     z-index: 1;
+    opacity: 90%;
+
 }
 
 header .logo {
@@ -71,8 +83,7 @@ header .logo {
 }
 
 #imglogo {
-    padding-top: 10px;
-    width: 50px;
+    width: 250px;
 }
 
 .nav-link {
@@ -102,10 +113,6 @@ li {
     margin-left: 40px;
 }
 
-.navigation a:hover {
-    color: var(--grey);
-}
-
 .navigation a::after {
     content: '';
     position: absolute;
@@ -128,8 +135,8 @@ li {
     padding: 15px 25px;
     width: 130px;
     height: 50px;
-    background: var(--black);
-    border: 1px solid var(--white);
+    background: var(--grad);
+    border: 1px solid var(--grey);
     outline: none;
     cursor: pointer;
     color: var(--white);
@@ -140,9 +147,7 @@ li {
 }
 
 .navigation .btnLogin-popup:hover {
-    background: var(--white);
-    color: var(--black);
-    border: none;
+    background: var(--grad-inv);
 }
 
 
@@ -185,7 +190,6 @@ li {
     }
 
     header {
-        padding-left: 20px;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -194,7 +198,10 @@ li {
 
     header .logo {
         margin-left: -35px;
-        margin-right: px;
+    }
+
+    #imglogo{
+        padding-top: 10px;
     }
 
     .hamburger {
@@ -239,7 +246,8 @@ li {
         left: 0;
         justify-content: center;
         align-items: center;
-        background: var(--black);
+        background: var(--grad);
+        opacity: 95%;
     }
 
     .events img {
@@ -284,10 +292,10 @@ li {
     top: 80px;
     position: relative;
     width: 370px;
-    background: var(--white);
+    background: var(--grad);
     box-shadow: 10px 10px 10px var(--black);
-    border: 2px solid var(--black);
-    color: var(--black);
+    border: 1px solid var(--grey);
+    color: var(--white);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -297,13 +305,8 @@ li {
     transition: 0.2s;
 }
 
-.wrapper:hover {
-    transition: 0.2s;
-    box-shadow: 3px 3px 3px var(--black);
-}
-
 .wrapper-active {
-    padding-bottom: 220px;
+    padding-bottom: 25%;
 }
 
 .wrapper h1 {
@@ -321,7 +324,7 @@ li {
 .input-box input {
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: var(--white);
     outline: none;
     border: 1px solid var(--black);
     font-size: 12px;
@@ -342,8 +345,7 @@ li {
     right: 20px;
     transform: translateY(80%);
     font-size: 16px;
-    filter: invert(30%);
-    filter: opacity(80%);
+    filter: invert(100%);
 }
 
 
@@ -352,7 +354,7 @@ li {
 .wrapper .tandc {
     display: flex;
     justify-content: left;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 5px 0 10px;
 }
 
@@ -362,7 +364,7 @@ li {
 }
 
 .tandc a {
-    color: var(--black);
+    color: var(--grey);
     text-decoration: underline;
 }
 
@@ -378,9 +380,9 @@ li {
     margin-bottom: 15px;
     width: 100%;
     height: 50px;
-    background: var(--black);
+    background: var(--grad);
     color: var(--white);
-    border: none;
+    border: 1px solid var(--grey);
     outline: none;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 30%);
     cursor: pointer;
@@ -390,9 +392,7 @@ li {
 }
 
 .wrapper .btn:hover {
-    background: var(--white);
-    color: var(--black);
-    border: 1px solid var(--black);
+    background: var(--grad-inv);
     box-shadow: 5px 5px 5px var(--black);
 }
 
@@ -466,11 +466,6 @@ li {
     color: var(--white);
 }
 
-.active {
-    background: var(--black);
-    color: var(--white);
-}
-
 .menu-open {
     display: block;
     opacity: 1;
@@ -502,22 +497,6 @@ body .events {
 
 /* about ---------------------------------------------------------- */
 
-.hero {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: var(--white);
-    text-align: center;
-    padding: 2rem 1rem;
-}
-
-.hero-text h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-.hero-text p {
-    font-size: 1.2rem;
-}
-
 .about {
     min-height: 100vh;
     padding-bottom: 50px;
@@ -534,7 +513,7 @@ body .events {
 .about h1,
 h2 {
     font-size: 2rem;
-    color: var(--grey);
+    color: var(--black);
 }
 
 .about h1 {
@@ -543,7 +522,8 @@ h2 {
     color: var(--grey);
 }
 
-.about h2, h3 {
+.about h2,
+h3 {
     margin-top: 5%;
     margin-bottom: 20px;
     padding-bottom: 15px;
@@ -588,6 +568,75 @@ h2 {
     margin: -120px auto 100px auto;
 }
 
+.upperarrow .arrow {
+    margin-top: 30px;
+}
+
+.upperarrow .arrow1 {
+    margin-bottom: 50px;
+}
+
+
+/* faq ---------------------------------------------------------- */
+
+
+.faq-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 5% auto;
+    padding: 5%;
+}
+
+.faq-container h1 {
+    color: var(--grey);
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: var(--grad);
+    border: 1px solid var(--grey);
+    padding: 20px;
+}
+
+.faq-item input[type="checkbox"] {
+    display: none;
+}
+
+.faq-item label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.faq-item label h2 {
+    margin-right: 10px;
+    color: var(--white);
+    font-size: 25px;
+}
+
+.faq-item input[type="checkbox"]:checked+label+.answer {
+    display: block;
+}
+
+.answer {
+    display: none;
+    padding-top: 10px;
+    color: var(--grey);
+    font-size: 1.5rem;
+}
+
+
 
 /* events ---------------------------------------------------------- */
 
@@ -605,38 +654,34 @@ main li {
     padding-top: 6%;
 }
 
-strong {
-    color: var(--white);
-}
-
 /* Section Spacing */
 section {
     margin-bottom: 10%;
 }
 
-.register .navigation{
+.register .navigation {
     justify-content: center;
     padding-bottom: 20%;
 }
 
 .register .navigation .btnLogin-popup {
     padding: 15px 15px;
-    background: var(--transparent);
+    background: var(--grad);
+    color: var(--grey);
     border: 1px solid var(--grey);
     font-size: 2rem;
     font-weight: 600;
-    margin-left: 40px;
 }
 
 .register .navigation .btnLogin-popup:hover {
-    background: var(--white);
-    border: none;
+    background: var(--grad-inv);
 }
 
 /* footer ---------------------------------------------------------- */
 
 .footer {
-    background: var(--black);
+    background: var(--grad);
+    opacity: 90%;
     text-align: center;
     padding: 20px 0;
     color: var(--white);
@@ -649,18 +694,18 @@ section {
     width: 100%;
     margin: 1% 0%;
     padding: 0.7% 0%;
-    color: var(--grey);
+    color: var(--white);
     font-size: 0.8em;
 }
 
 .footer .row a {
     text-decoration: none;
-    color: var(--grey);
+    color: var(--white);
     transition: 0.5s;
 }
 
 .footer .row a:hover {
-    color: var(--white);
+    color: var(--black);
 }
 
 .footer .row ul {
@@ -725,12 +770,12 @@ section {
 }
 
 .timeline-item.right .timeline-content {
-    border: 2px solid var(--black);
+    border: 1px solid var(--grey);
     margin-left: 15px;
 }
 
 .timeline-item.left .timeline-content {
-    border: 2px solid var(--black);
+    border: 1px solid var(--grey);
     margin-right: 15px;
 }
 
