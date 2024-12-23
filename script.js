@@ -147,7 +147,8 @@ var cob = document.getElementsByName("College")[0]
 const college = cob.value;
 var eob=  document.getElementsByName("Email")[0]
 const email =eob.value;
-const mobile = "test";
+var mobileob=  document.getElementsByName("Phone")[0]
+const mobile = mobileob.value;
 var participant1ob = document.getElementById("Participant1");
 var participant2ob = document.getElementById("Participant2");
 var participant3ob = document.getElementById("Participant3");
@@ -170,6 +171,7 @@ fetch(url)
     evob.value = "";
     cob.value ="";
     eob.value ="";
+    mobileob.value="";
   participant1ob.value="";
    participant2ob.value="";
    participant3ob.value="";
