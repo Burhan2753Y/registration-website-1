@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Quick Think-Register</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style1.css?v=3">
 </head>
 
 
 <body>
+    <div class="loader"></div>
 
     <header>
 
@@ -19,9 +20,10 @@
         <nav class="navigation">
 
             <ul class="nav-menu">
+                <li class="nav-item"><a href="../home.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="../event.html" class="nav-link">Event</a></li>
                 <li class="nav-item"><a href="../faq.html" class="nav-link">FAQ</a></li>
-                <li class="nav-item"><a href="../rules.html" class="nav-link">Rules</a></li>
                 <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
                 <li class="nav-item"><a class="btnLogin-popup nav-link" href="../register.html">Register</a></li>
             </ul>
@@ -33,10 +35,11 @@
         </nav>
 
     </header>
-<div class="loader"></div>
+
     <div class="wrapper">
 
         <div class="register">
+            
                 <h1 id="event-name">Quick Think</h1>
 
                 <div class="input-box">
@@ -48,9 +51,25 @@
                     <input type="text" name="College" placeholder="College Name" required>
                     <i class="fa fa-university"></i>
                 </div>
+                
+                <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">Select your branch</span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu">
+                        <li class="active">Select your branch</li>
+                        <li>B.Tech</li>
+                        <li>BSC CS</li>
+                        <li>BSC IT</li>
+                        <li>BCA</li>
+                        <li>Other</li>
+                    </ul>
+                </div>
+                
 
                 <div class="input-box">
-                    <input type="text" name="Phone" placeholder="Phone Number(Team Leader's)" required>
+                    <input type="number" name="Phone" placeholder="Phone Number(Team Leader's)" required>
                     <i class="fa fa-phone"></i>
                 </div>
 
@@ -74,6 +93,8 @@
                 <button onclick="submitForm()" class="btn">Submit</button>
 
 
+            
+
         </div>
 
     </div>
@@ -82,10 +103,11 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="footer">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.123109660788!2d72.83244027608852!3d18.970169682212767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce36facd0825%3A0x96865315519767ee!2sBurhani%20College!5e0!3m2!1sen!2sin!4v1735096075282!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="row">
                 <a href="https://www.facebook.com/BurhaniCollege/"><i class="fa fa-facebook"></i></a>
                 <a href="https://twitter.com/collegeburhani?lang=en"><i class="fa fa-twitter"></i></a>
-                <a href="https://www.instagram.com/burhanicollege_official/?hl=en"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.instagram.com/technovation_burhani/"><i class="fa fa-instagram"></i></a>
                 <a href="https://www.youtube.com/@burhanicollege7361"><i class="fa fa-youtube"></i></a>
             </div>
 
@@ -100,13 +122,13 @@
             </div>
 
             <div class="row">
-                Copyright © 2024 yo momma - All rights reserved
+                Copyright © 2025 Technovation - All rights reserved
             </div>
         </div>
     </footer>
 
 
-    <script src="../script.js"></script>
+    <script src="../script1.js? v=1"></script>
 </body>
 
 </html>
