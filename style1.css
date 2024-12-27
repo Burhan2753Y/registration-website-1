@@ -13,7 +13,7 @@
     /* --grad: linear-gradient(#001f2a, #198097, #001118); */
     /* --grad-inv: linear-gradient(#198097, #001f2a, #198097); */
     --grad: #060216;
-    --grey: #afafaf;
+    --grey: #f4f4f4;
     --white: #f4f4f4;
     --transparent: rgba(0, 0, 0, 0.6);
     
@@ -587,19 +587,22 @@ body .events {
 body .sponsor {
     width: 90%;
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .sponsor img {
     display: flex;
     margin: 20px auto;
-    max-width: 20%;
+    max-width: 30%;
     border: 3px solid var(--transparent);
     border-radius: 10px;
     transition: 0.2s;
 }
 
 .sponsor img:hover {
-    max-width: 35%;
+    max-width: 45%;
     border: none;
     box-shadow: 10px 10px 10px black;
     transition: 0.2s;
@@ -697,6 +700,14 @@ h3 {
     margin: 0 auto;
 }
 
+.contact-item{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    gap: 50px;
+    align-items: center;
+}
+
 .contact-grid {
     display: flex;
     flex-wrap: wrap;
@@ -748,9 +759,9 @@ h3 {
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    top: -87px;
-    left: 100px;
+    /* position: relative;
+    top: -50px;
+    left: 50px; */
 }
 
 .contact-info:hover {
@@ -783,6 +794,13 @@ h3 {
     margin-top: 20px;
     flex-wrap: wrap;
     /* Allow wrapping */
+}
+
+.contact-type{
+    color: var(--grey);
+    margin-bottom: 100px;
+    margin-top: 100px;
+
 }
 
 
